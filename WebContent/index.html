@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Login page</title>
+<link rel="stylesheet" type="text/css" media="all" href="css/mystyle.css" />
+<script src="JS/utils.js" charset="utf-8" defer></script>
+<script src="JS/loginManagement.js" charset="utf-8" defer></script>
+
+</head>
+<body  >
+<div id="id_loginContainer">
+	<h1>Welcome to the Images Gallery application</h1>
+	<div >
+		<form action="#">
+		<fieldset >
+		<h2> LOG IN </h2>
+			Username: <input type="text" name="username" required> <br>
+			Password: <input type="password" name="pwd" required><br>
+			<input id="loginbutton" type="button" value="login">
+			<p id = "errormessage"></p>
+		</fieldset>
+		</form>
+	</div>
+	
+	<br><p>New user? <a href="#" id="id_sign_up">Sign Up</a></p>
+	
+	
+</div>	
+	<div id="id_signupContainer" style="visibility: hidden;">
+		<form action="#" id="id_fromSignup">
+			
+			<fieldset >
+			<br><p>New user? Sign Up</p>
+			<h2> SIGN UP </h2>
+				E-Mail: <input type="email" name="emailReg" id="id_emailREG" required> <br>
+				Username: <input type="text" name="usernameReg" id="id_usernREG" required> <br>
+				Password: <input type="password" name="pwdReg" id="id_psw1" required><br>
+				Repeat Password: <input type="password" name="pwdReg2" id="id_psw2"  required><br>
+				<input id="signupbutton" type="button" value="sign up">
+				<p id = "errormessage2"></p>
+			</fieldset>
+		</form>
+	</div>
+
+
+</body>
+</html>

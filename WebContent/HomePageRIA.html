@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+<link rel="stylesheet" type="text/css" media="all" href="css/mystyle.css" />
+
+<script src="JS/utils.js" charset="utf-8" defer></script>
+
+<script src="JS/albumManagement.js" charset="utf-8" defer></script>
+<script src="JS/dragDropTableRows.js" charset="utf-8" defer></script>
+
+<!-- <script src="sort.js" charset="utf-8" defer></script> -->
+
+</head>
+<body>
+	<div align="right">
+		<a href="LogoutRIA">Logout</a>
+	</div>
+	<h1>Welcome to the Images Gallery Home Page</h1>
+	<p>Nice to see you again <span id="id_username"></span></p>
+	<div id="id_alert" class="alertmessage"></div>	
+
+		
+	
+	
+<table  ><!--esterna1-->
+	<tr>
+    	<td > <!--blocco1 ALBUM-->
+        	<div class = "centered"> ALBUM<!--div1-->
+			
+              	<table id = "id_interna1">  <!--interna1-->
+
+                	<thead >
+                	<tr >
+						 <th>
+                        <img width= "25" src= "./Images/LogoMakr_6xUZ01.png"> 	 
+                        </th>
+                    	<th>
+                        	Title
+                        </th>
+                        <th >
+                        	Date
+                        </th>
+                    </tr>
+                    </thead>
+                    
+                    <tbody id = "id_interna1_body" >
+                    	<!--inserire qui lista album-->
+                    </tbody>
+     
+                </table>
+			
+            </div>
+		
+        <div id="id_contenitore_SalvaOrdinamento">
+           	<input type="button" value="Save New Order" name="Save New Order" class="Save" id="id_saveOrder">
+			
+        </div>
+			<p id="id_avvisoOrdinamentoEsistente"></p>
+        </td>
+        
+        <td class = "alignTop">  <!--blocco2 IMMAGINI-->
+        	<div class = "centered"> IMAGES<!--div1-->
+			<h2 id = "id_titoloAlbum"></h2>
+        	<p id = "intro_attesa_selezione">Seleziona un album per vederne la galleria di immagini</p>
+        	<p id = "intro_dopo_selezione" style="visibility: hidden;">Passa il mouse su un'immagine per leggere/aggiungere un commento</p>
+            	
+                <table id = "id_interna2SELECTED"> <!--interna2-->
+          
+            	<!--    <tr>               	
+                    	<td>IMG1</td>
+                        <td>IMG2</td>
+                        <td>IMG3</td>
+                        <td>IMG4</td>
+                        <td>IMG5</td>
+                   </tr>--> 
+                               	
+               
+                   
+                </table>
+
+
+                <div id="contenitorePrevNext">
+                	<input type="button" value="prev" name="prev" class="prev" id="id_prevButton">
+                	<input type="button" name="next" value="next" class="next" id="id_nextButton">
+                </div>
+
+			<table id = "id_interna2WAIT"> <!--interna2-->
+      
+            	   <tr>               	
+                    	<td class = "noBordo">
+	                    	<div class ="container">
+	                    		<div class="btn">
+	                    			<div class="bg"></div>
+	                    		</div> 
+	                    	</div>
+                    	</td>
+                    	
+                    	<td class = "noBordo">
+	                    	<div class ="container">
+	                    		<div class="btn">
+	                    			<div class="bg"></div>
+	                    		</div> 
+	                    	</div>
+                    	</td>
+                    	
+                    	<td class = "noBordo">
+	                    	<div class ="container">
+	                    		<div class="btn">
+	                    			<div class="bg"></div>
+	                    		</div> 
+	                    	</div>
+                    	</td>
+                    	
+                    	<td class = "noBordo">
+	                    	<div class ="container">
+	                    		<div class="btn">
+	                    			<div class="bg"></div>
+	                    		</div>  
+	                    	</div>
+                    	</td>
+                    	
+                    	<td class = "noBordo">
+	                    	<div class ="container">
+	                    		<div class="btn">
+	                    			<div class="bg"></div>
+	                    		</div> 
+	                    	</div>
+                    	</td>
+                        
+                   </tr>
+                </table>
+
+				
+			
+
+                
+            </div>
+        
+        </td>
+    </tr>
+
+
+</table>
+
+
+
+
+<!-- SCHELETRO PER CREAZIONE TRAMITE DOM DELLA MODAL-->
+<div id= "id_modalDaMostrare" class= "modal">
+	<table id = "id_contenitore_dettagli_IM">            	<!-- tableExt -->
+		<tbody>                                          	<!-- bodyExt -->
+			<tr>											<!-- row1 -->
+				<td>										<!-- data1 -->					 
+					<img id = "id_imagDaMostrare"></img>	<!-- imagTag -->
+       			</td>
+				<td>										<!-- data2 -->
+					<p id = "id_titolo_imm"></p>			<!-- titTag -->
+					<p id = "id_data_imm"></p>				<!-- dataTag -->
+					<p id = "id_descr_imm"></p>				<!-- descrTag -->
+				</td>
+			</tr>
+			<tr>											<!-- row2  -->
+				<td>										<!-- data12 -->
+					<table id = "id_table_commenti">		<!-- tableComm -->
+						<thead>								<!--  tableCommHead -->
+							<tr>							<!--  tableCommR1-->
+								<th> User </th>				<!--  tableCommH1-->
+								<th> Commento </th>			<!--  tableCommH2-->
+							</tr>
+						</thead>
+						<tbody>								<!-- tableCommBody -->
+							<tr>							<!-- tableCommR2-->
+								<td>						<!-- tableCommUserData-->
+								</td>
+								
+								<td>						<!--  tableCommTextData-->
+								</td>
+							</tr>
+						</tbody>	
+					</table>
+				</td>
+				
+				<td>										<!-- data22  -->
+					<form id="id_inserisci_commento" action="#"> <!-- form -->
+						<fieldset>                               <!-- fieldset -->
+							<p>                                   <!--  pTagAggComm-->
+					Inserisci un commento <textarea  name="commento" required /></textarea> <!--  input1-->
+							</p>
+						</fieldset>
+						<input type="button"  type="button" name="Invia Commento" value="Invia"> <!-- input2  -->
+					</form>
+				</td>
+				
+				
+			</tr>
+			
+
+		</tbody>
+	</table>
+</div>
+	
+	
+	
+	
+	
+	
+</body>
+</html>

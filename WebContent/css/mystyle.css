@@ -1,0 +1,203 @@
+th, td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid black;
+
+}
+
+.noBordo{
+  padding: 15px;
+  text-align: center;
+  border: none;
+	
+}
+
+h4 {
+	color: darkred;
+}
+
+td { 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    word-wrap: break-word;
+}
+
+h3{
+	color: purple;
+    font-style: oblique;
+    border-style: dashed;
+	text-align: left;
+
+}
+
+
+.centered {
+	text-align: center;
+}
+
+.alignTop{
+	border: none;
+	vertical-align: top;
+	width: max-content;
+}
+
+.sfondo {
+background: #2696DE;
+background: -moz-radial-gradient(center, #2696DE 0%, #2BA9FC 24%, #F7FEFF 100%);
+background: -webkit-radial-gradient(center, #2696DE 0%, #2BA9FC 24%, #F7FEFF 100%);
+background: radial-gradient(ellipse at center, #2696DE 0%, #2BA9FC 24%, #F7FEFF 100%);
+}
+
+
+h1{
+	color: rgb(128, 128, 192);
+    font-style: oblique;
+   	border-style: inset;
+	text-align: left;
+
+}
+
+
+.btn{
+	cursor: pointer;
+	margin: 30px;
+	display: inline-black;
+	position: relative;
+}
+
+
+.bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	outline: rgb(50, 115, 154) solid 2px;
+	opacity: 0.15;
+	animation: pulse 1.5s infinite alternate;
+	background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+@keyframes pulse{
+	0% { /*inizio animazione*/
+		transform: scale(12,12);
+		opacity: 0.15;	 
+	}
+	100% { /*fine animazione*/
+		transform: scale(18, 18);
+		opacity: 0.32;
+	}
+}
+
+
+.modal {
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    bottom: 10%;
+    right: 5%;
+	width: 100%;
+    display: none;
+    overflow: auto;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+}
+
+.modal-window {
+    position: relative;
+    background-color: #FFFFFF;
+    width: 100%;
+	left: 50%;
+    margin: 10% auto;
+    padding: 20px;
+	top: 70%;
+}
+
+
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgba(0,0,0,0.3);
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.close:hover,
+.close:focus {
+    color: #000000;
+    cursor: pointer;
+}
+
+.open {
+    display: block;
+}
+
+
+.modalText  {
+	color: white;
+}
+
+.modalText2  {
+	color: sandybrown;
+}
+
+.modalText3  {
+	color: lightsteelblue;
+	font-style: oblique;
+}
+
+.modalText4  {
+	color: lightcoral;
+	font-style: oblique;
+	opacity: 0.75;	 
+}
+
+.modalText5  {
+	color: red;
+	
+	opacity: 0.75;	 
+}
+
+.textField
+{
+    height:150px;
+	width: 200px;
+    font-size:14pt;
+	text-align: start;
+	text-align: left;
+	background-color:rgb(206, 219, 225);
+}
+
+/*DRAGGABLE TABLE ROWS*/
+ .draggable {
+    cursor: move;
+    user-select: none;
+}
+.placeholder {
+    background-color: #edf2f7;
+    border: 2px dashed #cbd5e0;
+}
+.clone-list {
+    border-top: 1px solid #ccc;
+}
+.clone-table {
+    border-collapse: collapse;
+    border: none;
+}
+.clone-table th, .clone-table td {
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 0.5rem;
+}
+.dragging {
+    background: #fff;
+    border-top: 1px solid #ccc;
+    z-index: 999;
+}
+
